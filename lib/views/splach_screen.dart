@@ -10,6 +10,8 @@ class SplachScreenUI extends StatefulWidget {
 class _SplachScreenUIState extends State<SplachScreenUI> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.red[900],
+    );
   }
 }
