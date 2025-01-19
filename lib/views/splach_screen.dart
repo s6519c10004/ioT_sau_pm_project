@@ -10,7 +10,7 @@ class SplachScreenUI extends StatefulWidget {
 
 class _SplachScreenUIState extends State<SplachScreenUI> {
   @override
-  void initSate() {
+  void initState() {
     Future.delayed(
       Duration(seconds: 3),
       () => Navigator.pushReplacement(
@@ -20,6 +20,7 @@ class _SplachScreenUIState extends State<SplachScreenUI> {
         ),
       ),
     );
+    super.initState();
   }
 
   @override
@@ -32,7 +33,7 @@ class _SplachScreenUIState extends State<SplachScreenUI> {
           children: [
             Image.asset(
               'assets/images/logo.png',
-              width: MediaQuery.of(context).size.width * 0.02,
+              width: MediaQuery.of(context).size.width * 0.5,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.25,
@@ -45,11 +46,18 @@ class _SplachScreenUIState extends State<SplachScreenUI> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            Text(
+              'createed by Jirayu IT SAU',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.25,
             ),
             CircularProgressIndicator(
-              color: Colors.white,
+              color: Colors.black,
             ),
           ],
         ),
